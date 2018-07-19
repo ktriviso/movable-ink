@@ -20,7 +20,7 @@ export default class Api extends Component {
     // this is for dynamically grabbing the users locations
     geolocation.getCurrentPosition(function (err, position) {
       if (err) throw err
-      const url = 'http://api.wunderground.com/api/6ea7cf3bc006012f/geolookup/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json'
+      const url = 'http://api.wunderground.com/api/' + process.env.REACT_APP_API_KEY + '/geolookup/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json'
       fetch(url)
       .then(res => res.json())
       .then((data) => {
@@ -36,7 +36,7 @@ export default class Api extends Component {
     })
 
     // this is for pulling the weather data from the api
-    fetch("http://api.wunderground.com/api/6ea7cf3bc006012f/forecast10day/q/NY/New_York.json")
+    fetch("http://api.wunderground.com/api/" + process.env.REACT_APP_API_KEY + "/forecast10day/q/NY/New_York.json")
     .then(res => res.json())
     .then((data) => {
       const forecast = data.forecast.simpleforecast.forecastday
