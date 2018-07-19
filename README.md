@@ -47,6 +47,9 @@ DEVELOPER NOTE: If any unforeseen error occurs with the fetch calls, the applica
 ERROR: The Weather Underground API is slow so there is a lag in the UI until it loads.
 RESOLUTION: Not resolved, This would not be an ideal 3rd Party API for production
 
+ERROR: User will run into errors if city name has symbols or more than one space, see Api.js line 45.
+RESOLUTION: This line can use more error handling to avoid this
+
 ERROR: A few times The Weather Underground API would not load the geolocation. No errors being logged so debugging was troublesome.
 RESOLUTION: Created a default location in case the API fails to load the user information. See line 80 in App.js
 

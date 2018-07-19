@@ -26,7 +26,9 @@ export default class Api extends Component {
       .then((data) => {
         const location = `${data.location.city}, ${data.location.state}`
         _this.setState({
-          location: location
+          location: location,
+          city: data.location.city,
+          state: data.location.state
         })
         _this.getWeather()
       })
@@ -40,13 +42,10 @@ export default class Api extends Component {
   getWeather = () => {
     // this.state was out of scope
     const _this = this
+    const city = this.state.city.replace(' ', '_')
 
-    console.log(this.state.location)
-    // you need to manipulate the string coming from the other fetch call
-    // then add it to the fetch call below so that its truly dynamic
-    
     // this is for pulling the weather data from the api
-    fetch("http://api.wunderground.com/api/" + process.env.REACT_APP_API_KEY + "/forecast10day/q/NY/New_York.json")
+    fetch("http://api.wunderground.com/api/" + process.env.REACT_APP_API_KEY + "/forecast10day/q/" + this.state.state + "/" + city + ".json")
     .then(res => res.json())
     .then((data) => {
       const forecast = data.forecast.simpleforecast.forecastday
