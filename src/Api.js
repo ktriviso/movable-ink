@@ -13,8 +13,7 @@ export default class Api extends Component {
       todaysForecastFromApi: '',
       tomorrowsForecastFromApi: '',
       dayAfterTomorrowsForecastFromApi: '',
-      location: '',
-      error: ''
+      location: ''
     }
   }
 
@@ -35,11 +34,7 @@ export default class Api extends Component {
       })
       .catch(function() {
         console.log("error");
-        // either way works, just remove line 94
-        // _this.props.history.push(`/error`)
-        _this.setState({
-          error: "error"
-        })
+        _this.props.history.push(`/error`)
       });
     })
 
@@ -80,22 +75,18 @@ export default class Api extends Component {
     })
     .catch(function() {
       console.log("error");
-      // either way works, just remove line 94
-      // _this.props.history.push(`/error`)
-      _this.setState({
-        error: "error"
-      })
+      _this.props.history.push(`/error`)
     });
   }
 
   render() {
-    this.state.error === 'error' ? this.props.history.push(`/error`) : null
 
     return (
       <div className="App">
 
         <header>
-          <p>weather forcast for {this.state.location === '' ? 'Your Location' : this.state.location}<hr/></p>
+          <p>weather forcast for {this.state.location === '' ? 'Your Location' : this.state.location}</p>
+          <hr/>
         </header>
 
         <section>

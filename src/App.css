@@ -23,10 +23,9 @@ section {
 hr {
   display: inline-block;
   width: 50px;
-
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 1.5%;
   border: 1px solid GoldenRod;
 }
 
