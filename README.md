@@ -51,7 +51,7 @@ ERROR: User will run into errors if city name has symbols or more than one space
 RESOLUTION: This line can use more error handling to avoid this
 
 ERROR: A few times The Weather Underground API would not load the geolocation. No errors being logged so debugging was troublesome.
-RESOLUTION: Created a default location in case the API fails to load the user information. See line 80 in App.js
+RESOLUTION: Created a default location in case the API fails to load the user information. See line 93 in App.js
 
 ERROR: The wunderground API coordinates are not very accurate in regards to pinpointing the city
 RESOLUTION: Not resolved, This would not be an ideal 3rd Party API for production
