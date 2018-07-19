@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Weather from './Weather'
 import './App.css';
 import geolocation from 'geolocation'
-// import { withRouter } from "react-router-dom";
-// import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router'
 
 // this is for the api key security
 // require('dotenv').config()
@@ -93,12 +91,11 @@ export default class Api extends Component {
   render() {
     this.state.error === 'error' ? this.props.history.push(`/error`) : null
 
-
     return (
       <div className="App">
 
         <header>
-          <p>weather forcast for {this.state.location === '' ? 'Your Location' : this.state.location}</p>
+          <p>weather forcast for {this.state.location === '' ? 'Your Location' : this.state.location}<hr/></p>
         </header>
 
         <section>
