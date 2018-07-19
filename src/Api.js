@@ -28,13 +28,23 @@ export default class Api extends Component {
         _this.setState({
           location: location
         })
+        _this.getWeather()
       })
       .catch(function() {
         console.log("error");
         _this.props.history.push(`/error`)
       });
     })
+  }
 
+  getWeather = () => {
+    // this.state was out of scope
+    const _this = this
+
+    console.log(this.state.location)
+    // you need to manipulate the string coming from the other fetch call
+    // then add it to the fetch call below so that its truly dynamic
+    
     // this is for pulling the weather data from the api
     fetch("http://api.wunderground.com/api/" + process.env.REACT_APP_API_KEY + "/forecast10day/q/NY/New_York.json")
     .then(res => res.json())
