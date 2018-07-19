@@ -15,7 +15,6 @@ export default class Weather extends Component {
   }
 
   render() {
-
     return (
       <div className="weather-boxes">
         <header>{this.props.data.date}</header>

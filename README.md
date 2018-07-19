@@ -52,8 +52,3 @@ RESOLUTION: Created a default location in case the API fails to load the user in
 
 ERROR: The wunderground API coordinates are not very accurate in regards to pinpointing the city
 RESOLUTION: Not resolved, This would not be an ideal 3rd Party API for production
-
-ERROR: Errors when using .env file to secure api key, see below:
-
-Failed to load http://api.wunderground.com/api/undefined/geolookup/q/40.7492582,-73.97868129999999.json: The 'Access-Control-Allow-Origin' header has a value 'http://www.wunderground.com' that is not equal to the supplied origin. Origin 'http://localhost:3000' is therefore not allowed access. Have the server send the header with a valid value, or, if an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
-RESOLUTION: Not resolved

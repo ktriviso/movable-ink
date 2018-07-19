@@ -3,9 +3,6 @@ import Weather from './Weather'
 import './App.css';
 import geolocation from 'geolocation'
 
-// this is for the api key security
-// require('dotenv').config()
-
 export default class Api extends Component {
   constructor(props){
     super(props)
@@ -80,7 +77,6 @@ export default class Api extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
 
