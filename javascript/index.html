@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>movable ink</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <p>weather forcast for <span id="location"></span></p>
+      <hr>
+    </header>
+
+    <section>
+      <div class="weather-boxes">
+        <header id="today-weekday"></header>
+        <div class="container">
+          <div class="weather-icon">
+            <img id="today-icon" alt="weather icon" src=""/>
+          </div>
+          <div class="weather-details">
+            <p id="today-condition"></p>
+            <p id="today-temp"></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-boxes">
+        <header id="tomorrow-weekday"></header>
+        <div class="container">
+          <div class="weather-icon">
+            <img id="tomorrow-icon" alt="weather icon" src=""/>
+          </div>
+          <div class="weather-details">
+            <p id="tomorrow-condition"></p>
+            <p id="tomorrow-temp"></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-boxes">
+        <header id="dayAfterTomorrow-weekday"></header>
+        <div class="container">
+          <div class="weather-icon">
+            <img id="dayAfterTomorrow-icon" alt="weather icon" src=""/>
+          </div>
+          <div class="weather-details">
+            <p id="dayAfterTomorrow-condition"></p>
+            <p id="dayAfterTomorrow-temp"></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: Helvetica!important;
+  text-align: center;
+  font-size: 100%;
+}
+
+header {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+hr {
+  display: inline-block;
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  right: 1.5%;
+  border: 1px solid GoldenRod;
+}
+
+@media only screen and (max-width: 1215px) {
+  hr {
+    display: none;
+  }
+}
+
+.weather-boxes {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+}
+
+.weather-boxes header {
+  background-color: LightSteelBlue;
+  color: white;
+  margin: 0;
+  text-align: left;
+  padding: .5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1203px) {
+    .weather-boxes {
+      margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.weather-icon {
+  height: 147px;
+  width: 35%;
+}
+
+img {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}
+
+.weather-details {
+  height: 147px;
+  width: 65%;
+}
+
+p {
+  color: grey;
+}
+
+p span {
+  font-weight: bold;
+}
